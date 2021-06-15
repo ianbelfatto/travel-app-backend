@@ -5,3 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+# Trip.create!(user_id: 1, name: 'The Big Apple', city: 'New York', state: 'NY', image_url: 'https://www.miltonglaser.com/thumbs/665x408/files/far/iHeartNy-8744.jpg')
+
