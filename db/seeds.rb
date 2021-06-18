@@ -8,3 +8,5 @@
 
 # Trip.create!(user_id: 1, name: 'The Big Apple', city: 'New York', state: 'NY', image_url: 'https://www.miltonglaser.com/thumbs/665x408/files/far/iHeartNy-8744.jpg')
 
+# TripBusiness.create!(trip_id: 1, yelp_business_id: "H7S7-vF2z_HfaLo6BGPetw", comments: "Speakeasy on Eldridge St")
+TripBusiness.create!(trip_id: 1, yelp_business_id: "XipQLDbyTl5tsLlyzAWzug", comments: "Vegan Mexican")
