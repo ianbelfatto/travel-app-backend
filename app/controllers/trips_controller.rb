@@ -1,7 +1,8 @@
 class TripsController < ApplicationController
+  before_action :authenticate_user
   def create
     trip = Trip.new(
-      user_id: params[:user_id],
+      user_id: current_user.id,
       name: params[:name],
       city: params[:city],
       state: params[:state],
@@ -15,29 +16,32 @@ class TripsController < ApplicationController
   end
 
   def index
-    trips = Trip.all
-    render json: trips.as_json
+    trips = current_user.trips
+    render json: trips, include: "trip_businesses.business"
   end
 
   def show
-    trip = Trip.find_by(id: params[:id])
-    render json: trip
+    trip = current_user.trips.find_by(id: params[:id])
+    render json: trip, include: "trip_businesses.business"
   end
 
   def update
-    trip = Trip.find_by(id: params[:id])
+    trip = current_user.trips.find_by(id: params[:id])
     trip.name = params[:name] || trip.name
     trip.city =params[:city] || trip.city
     trip.state = params[:state] || trip.state
     trip.image_url = params[:image_url] || trip.image_url
     trip.save
-    render json: trip.as_json
+    render json: trip
   end
 
   def destroy
-    trip = Trip.find_by(id: params[:id])
+    trip = current_user.trips.find_by(id: params[:id])
     trip.destroy
-    render json: {message: "Trip successfully deleted!"}
+    render json: {
+      message: "Trip successfully deleted!",
+      errors:  trip.errors.full_messages
+     }
   end
 
 end
