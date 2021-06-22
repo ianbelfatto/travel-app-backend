@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     user = User.find_by(id: params[:id])
-    render json: user.as_json
+    render json: user
   end
 
   def update
@@ -27,8 +27,11 @@ class UsersController < ApplicationController
     user.last_name =params[:last_name] || user.last_name
     user.email = params[:email] || user.email
     user.password = params[:password] || user.password
-    user.save
-    render json: user.as_json
+    if user.save
+      render json: { message: "User updated successfully" }, status: :created
+    else
+      render json: { errors: user.errors.full_messages }, status: :bad_request
+    end
   end
 
   def destroy
