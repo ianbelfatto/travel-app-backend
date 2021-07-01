@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post "/users" => "users#create"
   patch "/users/:id" => "users#update"
   delete "/users/:id" => "users#destroy"
+  post "/sessions" => "sessions#create"
 
   # Trips
   get "/trips" => "trips#index"
@@ -17,8 +18,8 @@ Rails.application.routes.draw do
   patch "/tripbusiness/:id" => "trip_businesses#update"
   delete "/tripbusiness/:id" => "trip_businesses#destroy"
 
-  post "/sessions" => "sessions#create"
 
-  get "/businesses" => "businesses#index"
+  
+  get "/businesses/" => "businesses#index"
   get "/businesses/:yelp_business_id" => "businesses#show"
 end
