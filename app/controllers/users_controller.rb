@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :current_user
+  before_action :authenticate_user, :except => [:create]
 
   def create
     user = User.new(
@@ -17,16 +17,17 @@ class UsersController < ApplicationController
   end
 
   def show
-    user = User.find_by(id: params[:id])
+    user = current_user
     render json: user
   end
 
   def update
-    user = User.find_by(id: params[:id])
+    user = current_user
     user.first_name = params[:first_name] || user.first_name
     user.last_name =params[:last_name] || user.last_name
     user.email = params[:email] || user.email
     user.password = params[:password] || user.password
+    user.image_url = params[:image_url] || user.image_url
     if user.save
       render json: { message: "User updated successfully" }, status: :created
     else
@@ -35,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    user = User.find_by(id: params[:id])
+    user = current_user
     user.destroy
     render json: {message: "User successfully deleted!"}
   end
