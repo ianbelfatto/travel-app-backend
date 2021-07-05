@@ -1,7 +1,7 @@
 class BusinessesController < ApplicationController
-  # before_action :authenticate_user
+  before_action :authenticate_user
   def index
-    response = HTTP.auth("#{Rails.application.credentials.my_api_key}").get("https://api.yelp.com/v3/businesses/search?term=#{params[:terms]}&location=#{params[:location]}")
+    response = HTTP.auth("#{Rails.application.credentials.my_api_key}").get("https://api.yelp.com/v3/businesses/search?term=#{params[:terms].gsub(" ", "")}&location=#{params[:location].gsub(" ", "")}")
     api_business_index = response.parse(:json)["businesses"]
     render json: api_business_index
   end
