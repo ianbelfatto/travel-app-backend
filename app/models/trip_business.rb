@@ -7,13 +7,14 @@ class TripBusiness < ApplicationRecord
     response = HTTP.auth("#{Rails.application.credentials.my_api_key}").get("https://api.yelp.com/v3/businesses/#{yelp_business_id}")
     business = response.parse(:json)
     # return business
+    display_address = business["location"]["display_address"] || nil
     return {
       id: business["id"],
       name: business["name"],
       image_url: business["image_url"],
       open: !business["is_closed"],
       phone: business["phone"],
-      location: business["location"]["display_address"]
+      location: display_address
     }
   end
 end
