@@ -8,13 +8,16 @@ class TripBusiness < ApplicationRecord
     business = response.parse(:json)
     # return business
     display_address = business["location"]["display_address"] || nil
+    lat = business["coordinates"]["latitude"]
+    lng = business["coordinates"]["longitude"]
     return {
       id: business["id"],
       name: business["name"],
       image_url: business["image_url"],
       open: !business["is_closed"],
       phone: business["phone"],
-      location: display_address
+      location: display_address,
+      coordinates: [lat, lng,]
     }
   end
 end

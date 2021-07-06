@@ -16,7 +16,9 @@ class BusinessesController < ApplicationController
       open: api_business_object["is_closed"],
       rating: api_business_object["rating"],
       phone: api_business_object["phone"],
-      location: api_business_object["location"]["display_address"]
+      location: api_business_object["location"]["display_address"],
+      lat: api_business_object["coordinates"]["latitude"],
+      lng: api_business_object["coordinates"]["longitude"],
     }
   end
 end
