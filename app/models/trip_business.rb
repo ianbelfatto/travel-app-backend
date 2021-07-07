@@ -14,7 +14,7 @@ class TripBusiness < ApplicationRecord
       id: business["id"],
       name: business["name"],
       image_url: business["image_url"],
-      open: !business["is_closed"],
+      # open: !business["is_closed"],
       phone: business["phone"],
       location: display_address,
       coordinates: [lat, lng,],
