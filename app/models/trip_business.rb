@@ -17,7 +17,8 @@ class TripBusiness < ApplicationRecord
       open: !business["is_closed"],
       phone: business["phone"],
       location: display_address,
-      coordinates: [lat, lng,]
+      coordinates: [lat, lng,],
+      hours: business["hours"]
     }
   end
 end
