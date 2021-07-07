@@ -17,7 +17,7 @@ class TripsController < ApplicationController
 
   def index
     trips = current_user.trips
-    render json: trips, include: "trip_businesses.business"
+    render json: trips
   end
 
   def show
