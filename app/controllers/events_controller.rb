@@ -1,11 +1,11 @@
 class EventsController < ApplicationController
   before_action :authenticate_user
   def current_datetime
-    date_time = DateTime.now.utc
+    date_time = Time.now.getutc.to_i
   end
 
   def index
-    response = HTTP.auth("#{Rails.application.credentials.my_api_key}").get("https://api.yelp.com/v3/events?location=#{params[:location].gsub(" ", "")}&limit=25&start_date=1625760000&sort_by=desc&sort_on=popularity")
+    response = HTTP.auth("#{Rails.application.credentials.my_api_key}").get("https://api.yelp.com/v3/events?location=#{params[:location].gsub(" ", "")}&limit=50&start_date=#{current_datetime}&sort_on=popularity")
     api_event_index = response.parse(:json)["events"]
     render json: api_event_index
   end
