@@ -14,8 +14,14 @@ class TripEvent < ApplicationRecord
       image_url: event["image_url"],
       cost: event_cost,
       ticket_link: event["tickets_url"],
+      event_link: event["event_site_url"],
+      description: event["description"],
       location: display_address,
       coordinates: [lat, lng,],
     }
+  end
+
+  def current
+    ::Time.zone ? ::Time.zone.now.to_datetime : ::Time.now.to_datetime
   end
 end
