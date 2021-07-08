@@ -10,15 +10,16 @@ class TripBusiness < ApplicationRecord
     display_address = business["location"]["display_address"] || nil
     lat = business["coordinates"]["latitude"]
     lng = business["coordinates"]["longitude"]
+    open_hours = business["hours"]
     return {
       id: business["id"],
       name: business["name"],
       image_url: business["image_url"],
-      # open: !business["is_closed"],
+      open: !business["is_closed"],
       phone: business["phone"],
       location: display_address,
       coordinates: [lat, lng,],
-      hours: business["hours"]
+      business_hours: open_hours # cannot figure out how to parse like i did in business show
     }
   end
 end
