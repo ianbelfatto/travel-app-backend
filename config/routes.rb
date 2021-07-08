@@ -21,7 +21,16 @@ Rails.application.routes.draw do
   patch "/tripbusiness/:id" => "trip_businesses#update"
   delete "/tripbusiness/:id" => "trip_businesses#destroy"
 
+  # Trip Events
+  post "/tripevent" => "trip_events#create"
+  patch "/tripevent/:id" => "trip_events#update"
+  delete "/tripevent/:id" => "trip_events#destroy"
+
   # Businesses (from YELP API)
   get "/businesses/" => "businesses#index"
   get "/businesses/:yelp_business_id" => "businesses#show"
+
+  # Events (from YELP API)
+  get "/events" => "events#index"
+  get "/events/:yelp_event_id" => "events#show"
 end
