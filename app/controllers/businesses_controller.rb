@@ -19,7 +19,7 @@ class BusinessesController < ApplicationController
       location: api_business_object["location"]["display_address"],
       lat: api_business_object["coordinates"]["latitude"],
       lng: api_business_object["coordinates"]["longitude"],
-      business_hours: api_business_object["hours"][0]["open"]
+      open?: api_business_object["hours"][0]["is_open_now"]
 
     }
   end
