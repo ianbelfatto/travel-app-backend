@@ -13,13 +13,14 @@ class BusinessesController < ApplicationController
       id: api_business_object["id"],
       name: api_business_object["name"],
       image_url: api_business_object["image_url"],
-      # open: api_business_object["is_closed"],
+      open: api_business_object["is_closed"],
       rating: api_business_object["rating"],
       phone: api_business_object["phone"],
       location: api_business_object["location"]["display_address"],
       lat: api_business_object["coordinates"]["latitude"],
       lng: api_business_object["coordinates"]["longitude"],
-      hours: api_business_object["hours"][0]["open"]
+      business_hours: api_business_object["hours"][0]["open"]
+
     }
   end
 end
