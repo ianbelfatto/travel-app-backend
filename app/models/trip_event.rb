@@ -19,6 +19,7 @@ class TripEvent < ApplicationRecord
       description: event["description"],
       location: display_address,
       coordinates: [lat, lng,],
+      starts: event["time_start"]
     }
   end
 
