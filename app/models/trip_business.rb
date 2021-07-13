@@ -22,6 +22,7 @@ class TripBusiness < ApplicationRecord
       rating: business["rating"],
       review_count: business["review_count"],
       cost: business["price"],
+      business_link: business["url"]
 
     }
   end
