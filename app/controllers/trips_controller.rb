@@ -22,7 +22,11 @@ class TripsController < ApplicationController
 
   def show
     trip = current_user.trips.find_by(id: params[:id])
-    render json: trip, include: ["trip_businesses.business", "trip_events.event"]
+    if params[:q] == "edit"
+      render json: trip
+    else
+      render json: trip, include: ["trip_businesses.business", "trip_events.event"]
+    end
   end
 
   def update
