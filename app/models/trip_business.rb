@@ -1,6 +1,6 @@
 class TripBusiness < ApplicationRecord
   belongs_to :trip
-  validates :yelp_business_id, uniqueness: true
+  # validates :yelp_business_id, uniqueness: true
   
   def business
     # logic to query third party api for the correct business
