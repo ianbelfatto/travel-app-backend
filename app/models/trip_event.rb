@@ -1,6 +1,6 @@
 class TripEvent < ApplicationRecord
   belongs_to :trip
-  validates :yelp_event_id, uniqueness: true
+  # validates :yelp_event_id, uniqueness: true
   
   def event
     response = HTTP.auth("#{Rails.application.credentials.my_api_key}").get("https://api.yelp.com/v3/events/#{yelp_event_id}")
