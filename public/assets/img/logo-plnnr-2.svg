@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="44" viewBox="0 0 140 44">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 39px;
+        fill: #298ced;
+        text-anchor: middle;
+        font-family: "Helvetica Neue";
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <image id="logo-blue" width="140" height="44" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAAAsCAYAAAC33FDQAAADOUlEQVR4nO2cu5ncMAyEB/zUgZs4t3Sx3YG7OJfg2C25iXPqFA4IgACkXfHimz/ZlZYPAORSpESNvLy9q4gAAFQVIgKoQjERkXl+Hqzvduz5kNLbSagfK6BYZUAVgACy8vZ6S1kAYFm6nej2IuWB/46oq9vneaZ9YhUlX1tspv8zfbdx2TXrVpzjkX1F1ItlJ8xP99d9tDKybZ4021pi48Xk9ClekisqYavtk+s4UgG/I9giEPXqUAPpZsapZogbHv6eA4vUQKUTiUSe+PR8HrzoNeZqnKudoTSAhycHNizJjWZZsQJeGipKS43V7WzlZP8jporUCfJ/QXOp5sYqY4VhdQ703+MPmo9zR16/6VXMvJbWWQC8iggOK+DXnx9fvoOQB3z9+fcfgG9jjtqitznIp8bHx0Pn+CV3GcgnR+aE4RD2FbKJqmJA1iSOkEf4RHv0FQAhV/h16PClLCHPmb1kAACvSOQWG1WG34Ul5Bb1EYaQDRS2SiJkB4GtkupzHkIusMdcA/1BGyEX+Dx3KPJTSkKeoIrRH58TcoVvcxhcUZOPMBA7zQh5jI8rB+cvZAefuvDGHdlGRHBwwku28UcDvHFH7pgbzoHBrkJ2iDkML0hkB3/l5ODliOwgdQMVxxlyQ2ygAvgsidxjY8p885EjDLnDR5jTe8GEPELVltUcYcgN/uL/QFIyIOQRfg0anL+QPfjwkXyA2KIpAHfDkFvWjTuukMgGrtI1VLkJnNwjEFslAVxWk20GwHfxyQYmgjl4l5dsYaPKfFUWFEUkz9HZUfxOr3KYIU+RueUO8vL2rnbid57MhOhvU+C2tHFcvq/io4yr9EvF+loNvIgbZ6PzHaOmCp4VurtNoXod4tCpkLtymn5OUQHPZTbl8KzkvRTRNYXTLLtQ7z4pe9s5L7cKS69yehudVNtdWDr5ebI/tV2No7wCpgSuqoDiNSdyFescxKz2XeiOoju10pw6mS7Hl7M4B9Gd8MbULPe+6snK1kUFOwcugmBq2974botUNfAuD+/xWbLrq54s6e5K3qK6lM6LFPxK3+NSfKjBLrrsoWKe/b/4Q1al86Q87qrkSXVcms9Rjwj+Ay7+EoTobA1eAAAAAElFTkSuQmCC"/>
+  <text id="PLNNR" class="cls-1" x="68.819" y="35.632"><tspan x="68.819">PLNNR</tspan></text>
+</svg>
