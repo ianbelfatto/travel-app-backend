@@ -33,4 +33,6 @@ Rails.application.routes.draw do
   # Events (from YELP API)
   get "/events" => "events#index"
   get "/events/:yelp_event_id" => "events#show"
+
+  get "/*path" => proc { [200, {}, [ActionView::Base.new.render(file: 'public/index.html')]] }
 end
