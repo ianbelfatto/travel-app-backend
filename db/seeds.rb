@@ -1,8 +1,8 @@
 User.create!([
-  {first_name: "Dani", last_name: "Zaghian", email: "dani@gmail.com", image_url: "https://avatars.githubusercontent.com/u/13294925?v=4", password: "password"},
-  {first_name: "Winston", last_name: "Barbe", email: "winston@gmail.com", image_url: "https://media-exp3.licdn.com/dms/image/C4D03AQEUmZ5n-sGGPQ/profile-displayphoto-shrink_800_800/0/1596821232297?e=1631750400&v=beta&t=FJU0fLWmCXQ-OD1qC-DaVfdlLVr0wKSCHhk7KsHaSSc", password: "password"},
-  {first_name: "Ian", last_name: "Belfatto", email: "ian@gmail.com", image_url: "https://avatars.githubusercontent.com/u/83246707?v=4", password: "password"},
-  {first_name: "David", last_name: "Calhoun", email: "david@gmail.com", image_url: "https://ca.slack-edge.com/T01S54M1HK2-U01U5E6MS9W-6bfc73d63f9e-192", password: "password"}
+  {id: 1, first_name: "Dani", last_name: "Zaghian", email: "dani@gmail.com", image_url: "https://avatars.githubusercontent.com/u/13294925?v=4", password: "password"},
+  {id: 3, first_name: "Winston", last_name: "Barbe", email: "winston@gmail.com", image_url: "https://media-exp3.licdn.com/dms/image/C4D03AQEUmZ5n-sGGPQ/profile-displayphoto-shrink_800_800/0/1596821232297?e=1631750400&v=beta&t=FJU0fLWmCXQ-OD1qC-DaVfdlLVr0wKSCHhk7KsHaSSc", password: "password"},
+  {id: 5, first_name: "Ian", last_name: "Belfatto", email: "ian@gmail.com", image_url: "https://avatars.githubusercontent.com/u/83246707?v=4", password: "password"},
+  {id: 8, first_name: "David", last_name: "Calhoun", email: "david@gmail.com", image_url: "https://ca.slack-edge.com/T01S54M1HK2-U01U5E6MS9W-6bfc73d63f9e-192", password: "password"}
 ])
 
 Trip.create!([
