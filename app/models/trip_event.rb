@@ -1,5 +1,5 @@
 class TripEvent < ApplicationRecord
-  belongs_to :trip
+  belongs_to :trip, optional: true
   # validates :yelp_event_id, uniqueness: true
   
   def event

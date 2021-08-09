@@ -1,5 +1,5 @@
 class TripBusiness < ApplicationRecord
-  belongs_to :trip
+  belongs_to :trip, optional: true
   # validates :yelp_business_id, uniqueness: true
   
   def business
